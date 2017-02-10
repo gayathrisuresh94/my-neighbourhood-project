@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>map project</title>
+    <link href="css/style.css" rel="stylesheet">
+  
+    
+  </head>
+  <body>
+   
+    <div class="container">
+      
+        <!-- Hamburger Menu -->
+       <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+         
+        </div>
+        <div class="menu">
+          <div class="content-list">
+            <div class="data-input">
+        
+             <!-- Search box -->
+              <input type="text" class="search" data-bind="textInput: query" placeholder="Search">
+              <div id="list">
+                <ul class = "list" data-bind="foreach: search">
+                  <li class="list-item" data-bind=" text: title, click: $parent.onClick">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <div id="map"></div>
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/knockout-3.4.1.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!--<script onerror="Error()" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJP5SYPGuUc3dRs_1qMuH1hAx2BE9jOlQ&v=3&libraries=places,geometry,drawing&callback=initMap" ></script>-->
+    <script onerror="Error()" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpAwaE28LKec7y5eQhBZrmrhmE4Ek0dQ0&v=3&libraries=places,geometry,drawing&callback=initMap" ></script>
+  </body>
+</html>
